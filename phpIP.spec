@@ -47,7 +47,7 @@ if [ -f /home/httpd/html/phpip/includes/config_inc.php.rpmsave ]; then
 
 %files
 %defattr(644,root,root,755)
-%doc README ChangeLog TODO sql/*
+%doc README ChangeLog TODO INSTALL sql/*
 %dir %{_phpdir}
 %dir %{_phpdir}/img
 %dir %{_phpdir}/style
