@@ -41,11 +41,19 @@ install img/*.gif	$RPM_BUILD_ROOT%{_phpdir}/img
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%triggerpostun -- phpip
+if [ -f /home/httpd/html/phpip/includes/config_inc.php.rpmsave ]; then
+	mv -f /home/httpd/html/phpip/includes/config_inc.php.rpmsave %{_phpdir}/includes/config_inc.php
+
 %files
 %defattr(644,root,root,755)
 %doc README ChangeLog TODO sql/*
 %dir %{_phpdir}
+%dir %{_phpdir}/img
+%dir %{_phpdir}/style
+%dir %{_phpdir}/includes
 %{_phpdir}/*.php
-%{_phpdir}/includes/*.php
-%{_phpdir}/style/*.css
 %{_phpdir}/img/*.gif
+%{_phpdir}/style/*.css
+%config(noreplace) %verify(not md5 size mtime) %{_phpdir}/includes/config_inc.php
+%{_phpdir}/includes/[!c]*.php
