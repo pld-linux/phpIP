@@ -1,20 +1,20 @@
 Summary:	phpIP Manager - Management of IP Addresses
 Summary(pl):	phpIP Manager - zarz±dzanie adresami IP
 Name:		phpIP
-Version:	3.0
+Version:	3.2
 Release:	1
 License:	GPL v2
 Group:		Applications/Databases/Interfaces
 #Source0Download: http://www.vermeer.org/projects/phpip/
 Source0:	http://www.vermeer.org/projects/dl/phpip-%{version}.tar.gz
-# Source0-md5:	02e94aac4c626577d68bceb6d61281c6
+# Source0-md5:	34d615fc899de321a0062c099f3b28d1
 URL:		http://www.vermeer.org/projects/phpip/
 Requires:	mysql
 Requires:	php-mysql >= 4.1.0
 Requires:	webserver
+Obsoletes:	phpip
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-Obsoletes:	phpip
 
 %define		_phpdir	/home/services/httpd/html/phpip
 
