@@ -8,7 +8,7 @@ Group:		Applications/Databases/Interfaces
 #Source0Download: http://www.vermeer.org/projects/phpip/
 Source0:	http://www.vermeer.org/projects/dl/phpip-%{version}.tar.gz
 # Source0-md5:	34d615fc899de321a0062c099f3b28d1
-Source1:        %{name}.conf
+Source1:	%{name}.conf
 URL:		http://www.vermeer.org/projects/phpip/
 Requires:	mysql
 Requires:	php-mysql >= 4.1.0
@@ -17,8 +17,8 @@ Obsoletes:	phpip
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_phpdir	%{_datadir}/%{name}
-%define 	_sysconfdir     /etc/%{name}
+%define		_phpdir		%{_datadir}/%{name}
+%define		_sysconfdir	/etc/%{name}
 
 %description
 phpIP Management is tool to manage IP addresses. It features
@@ -47,7 +47,7 @@ install img/*.gif	$RPM_BUILD_ROOT%{_phpdir}/img
 
 cp includes/config_inc.php $RPM_BUILD_ROOT%{_sysconfdir}
 
-ln -sf %{_sysconfdir}/config_inc.php                $RPM_BUILD_ROOT%{_phpdir}/includes/config_inc.php
+ln -sf %{_sysconfdir}/config_inc.php $RPM_BUILD_ROOT%{_phpdir}/includes/config_inc.php
 
 install %{SOURCE1} $RPM_BUILD_ROOT/etc/httpd/%{name}.conf
 
