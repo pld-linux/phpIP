@@ -1,11 +1,11 @@
 Summary:	phpIP Manager - Management of IP Addresses
 Summary(pl):	phpIP Manager - zarz±dzanie adresami IP
 Name:		phpIP
-Version:	2.2
+Version:	3.0
 Release:	1
 License:	GPL v2
 Group:		Applications/Databases/Interfaces
-Source0:	http://www.vermeer.org/projects/dl/%{name}-%{version}.tar.gz
+Source0:	http://www.vermeer.org/projects/dl/phpip-%{version}.tar.gz
 URL:		http://www.vermeer.org/projects/
 Requires:	mysql
 Requires:	php-mysql >= 4.1.0
@@ -27,7 +27,7 @@ mo¿liwo¶æ autentyfikacji przy dostêpie do bazy IP, sprawdzanie
 poprawno¶ci danych w formularzach oraz konfigurowalne opcje szukania.
 
 %prep
-%setup -q
+%setup -q -n phpip-%{version}
 
 %install
 rm -rf $RPM_BUILD_ROOT
