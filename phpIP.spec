@@ -6,6 +6,7 @@ Release:	1
 License:	GPL v2
 Group:		Applications/Databases/Interfaces
 Source0:	http://www.vermeer.org/projects/dl/phpip-%{version}.tar.gz
+# Source0-md5:	02e94aac4c626577d68bceb6d61281c6
 URL:		http://www.vermeer.org/projects/
 Requires:	mysql
 Requires:	php-mysql >= 4.1.0
