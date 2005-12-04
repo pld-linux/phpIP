@@ -71,7 +71,7 @@ if [ -f %{_sysconfdir}/config_inc.php.rpmsave ]; then
 %{_phpdir}/*.php
 %{_phpdir}/img/*.gif
 %{_phpdir}/style/*.css
-%config(noreplace) %verify(not md5 size mtime) %{_phpdir}/includes/config_inc.php
+%config(noreplace) %verify(not md5 mtime size) %{_phpdir}/includes/config_inc.php
 %{_phpdir}/includes/[!c]*.php
 
 %defattr(640,http,http,750)
