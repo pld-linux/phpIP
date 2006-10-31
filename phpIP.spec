@@ -1,3 +1,4 @@
+# TODO: webapps?
 Summary:	phpIP Manager - Management of IP Addresses
 Summary(pl):	phpIP Manager - zarz±dzanie adresami IP
 Name:		phpIP
@@ -26,8 +27,8 @@ authentication for accessing the IP database, form validity checks,
 and customizable searches.
 
 %description -l pl
-phpIP Management jest narzêdziem do zarz±dzania adresami IP. Posiada
-mo¿liwo¶æ autentyfikacji przy dostêpie do bazy IP, sprawdzanie
+phpIP Management jest narzêdziem do zarz±dzania adresami IP. Ma
+mo¿liwo¶æ uwierzytelniania przy dostêpie do bazy IP, sprawdzanie
 poprawno¶ci danych w formularzach oraz konfigurowalne opcje szukania.
 
 %prep
@@ -35,10 +36,8 @@ poprawno¶ci danych w formularzach oraz konfigurowalne opcje szukania.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT%{_phpdir}/{img,includes,style} \
 	   $RPM_BUILD_ROOT{%{_sysconfdir},/etc/httpd}
-
 
 install *.php		$RPM_BUILD_ROOT%{_phpdir}
 install includes/*.php	$RPM_BUILD_ROOT%{_phpdir}/includes
@@ -58,6 +57,7 @@ rm -rf $RPM_BUILD_ROOT
 %triggerpostun -- phpip
 if [ -f %{_sysconfdir}/config_inc.php.rpmsave ]; then
 	mv -f %{_sysconfdir}/config_inc.php.rpmsave %{_sysconfdir}/config_inc.php
+fi
 
 %files
 %defattr(644,root,root,755)
@@ -74,6 +74,4 @@ if [ -f %{_sysconfdir}/config_inc.php.rpmsave ]; then
 %config(noreplace) %verify(not md5 mtime size) %{_phpdir}/includes/config_inc.php
 %{_phpdir}/includes/[!c]*.php
 
-%defattr(640,http,http,750)
-%dir /etc/httpd
-/etc/httpd/%{name}.conf
+%attr(640,http,http) /etc/httpd/%{name}.conf
