@@ -1,6 +1,6 @@
 # TODO: webapps?
 Summary:	phpIP Manager - Management of IP Addresses
-Summary(pl):	phpIP Manager - zarz±dzanie adresami IP
+Summary(pl.UTF-8):   phpIP Manager - zarzÄ…dzanie adresami IP
 Name:		phpIP
 Version:	3.2
 Release:	3
@@ -27,10 +27,10 @@ phpIP Management is tool to manage IP addresses. It features
 authentication for accessing the IP database, form validity checks,
 and customizable searches.
 
-%description -l pl
-phpIP Management jest narzêdziem do zarz±dzania adresami IP. Ma
-mo¿liwo¶æ uwierzytelniania przy dostêpie do bazy IP, sprawdzanie
-poprawno¶ci danych w formularzach oraz konfigurowalne opcje szukania.
+%description -l pl.UTF-8
+phpIP Management jest narzÄ™dziem do zarzÄ…dzania adresami IP. Ma
+moÅ¼liwoÅ›Ä‡ uwierzytelniania przy dostÄ™pie do bazy IP, sprawdzanie
+poprawnoÅ›ci danych w formularzach oraz konfigurowalne opcje szukania.
 
 %prep
 %setup -q -n phpip-%{version}
