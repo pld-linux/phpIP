@@ -1,6 +1,6 @@
 # TODO: webapps?
 Summary:	phpIP Manager - Management of IP Addresses
-Summary(pl.UTF-8):   phpIP Manager - zarządzanie adresami IP
+Summary(pl.UTF-8):	phpIP Manager - zarządzanie adresami IP
 Name:		phpIP
 Version:	3.2
 Release:	3
